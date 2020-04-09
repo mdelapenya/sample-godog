@@ -1,6 +1,6 @@
 # Sample Godog
 
-This project is a sample for [Godog](https://github.com/cucumber/godog), the official implementation of Cucumber for Golang.
+This project is a sample for [Godog](https://github.com/cucumber/godog), the official implementation of Cucumber for Golang, demonstrating an issue I found there: https://github.com/cucumber/godog/issues/196
 
 ## How to run the tests filtering by tags
 1. Install godog
