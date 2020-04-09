@@ -37,6 +37,10 @@ func GodogsFeatureContext(s *godog.Suite) {
 	s.Step(`^there should be (\d+) remaining$`, thereShouldBeRemaining)
 
 	s.BeforeScenario(func(*messages.Pickle) {
+		fmt.Println("Before Godogs scenario...")
 		Godogs = 0 // clean the state before every scenario
+	})
+	s.AfterScenario(func(*messages.Pickle, error) {
+		fmt.Println("After Godogs scenario...")
 	})
 }

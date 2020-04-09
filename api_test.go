@@ -79,4 +79,11 @@ func APIFeatureContext(s *godog.Suite) {
 	s.Step(`^I send "(GET|POST|PUT|DELETE)" request to "([^"]*)"$`, api.iSendrequestTo)
 	s.Step(`^the response code should be (\d+)$`, api.theResponseCodeShouldBe)
 	s.Step(`^the response should match json:$`, api.theResponseShouldMatchJSON)
+
+	s.BeforeScenario(func(*messages.Pickle) {
+		fmt.Println("Before API scenario...")
+	})
+	s.AfterScenario(func(*messages.Pickle, error) {
+		fmt.Println("After API scenario...")
+	})
 }
